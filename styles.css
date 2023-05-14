@@ -66,6 +66,7 @@ main {
   border: none;
   margin-top: 168px;
   width: 577px;
+  height: 100%;
   resize: none;
 }
 
@@ -136,6 +137,7 @@ main {
 }
 
 .mensaje {
+  height: 100%;
   font-family: "Inter", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
