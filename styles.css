@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* Colores */
+
+:root {
+  /* White */
+  --White: #ffffff;
+
+  /* Dark blue*/
+  --Dark-blue-100: #609ed4;
+  --Dark-blue-200: #356ea9;
+  --Dark-blue-300: #0a3871;
+  --Dark-blue-400: #072b61;
+  --Dark-blue-500: #052051;
+
+  /* Light blue */
+  --Light-blue-100: #f3f5fc;
+  --Light-blue-200: #eff1fa;
+  --Light-blue-300: #e9ecf8;
+  --Light-blue-400: #aab2d5;
+  --Light-blue-500: #757fb2;
+
+  /* Gray */
+  --Gray-100: #ced4da;
+  --Gray-200: #adb5bd;
+  --Gray-300: #868e96;
+  --Gray-400: #495057;
+  --Gray-500: #343a40;
+}
+
+/* Body */
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--Light-blue-100);
+}
+
+/* HEADER */
+
+.logo-alura {
+  position: absolute;
+  margin: 40px 0 0 40px;
+}
+
+/* MAIN */
+
+main {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* --section1 */
+
+.section1 {
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.texto {
+  background-color: transparent;
+  border: none;
+  margin-top: 168px;
+  width: 577px;
+  resize: none;
+}
+
+.texto,
+.texto::placeholder {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: var(--Dark-blue-300);
+}
+
+.texto:not(:placeholder-shown) {
+  text-transform: lowercase;
+}
+
+.texto:active,
+.texto:focus {
+  border: none;
+  outline: none;
+}
+
+.aviso {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  margin-bottom: 16px;
+  display: flex;
+  color: var(--Gray-400);
+}
+
+.aviso::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  content: url(./imagenes/Vector.png);
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-bottom: 72px;
+}
+
+/* --section2 */
+
+.section2 {
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rectangle {
+  width: 400px;
+  height: 95%;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  background: var(--White);
+  box-sizing: border-box;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.mensaje {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.25rem;
+  color: var(--Dark-blue-300);
+  border: none;
+  resize: none;
+}
+
+.mensaje:focus {
+  outline: none;
+}
+
+.texto-mostrado {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.no-mensaje {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+}
+
+.parrafo {
+  line-height: 1.5rem;
+}
+
+.copiar-btn {
+  width: 100%;
+}
+
+button {
+  width: 328px;
+  height: 67px;
+  border-radius: 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  transition: all 400ms;
+}
+
+button:hover {
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.light-normal {
+  background: transparent;
+  color: var(--Dark-blue-300);
+  border: 1px solid #0a3871;
+}
+
+.light-normal:hover {
+  background: #D8DFE8;
+}
+
+.dark-normal {
+  background: #0a3871;
+  color: var(--White);
+  border: none;
+}
+
+.dark-normal:hover {
+  background: var(--Dark-blue-400);
+}
+
+/* FOOTER */
+
+footer{
+  margin-top: 10px;
+}
+
+.dev {
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.dev p {
+  color: var(--Gray-400);
+}
+
+.dev a {
+  color: var(--Gray-400);
+  text-decoration: underline;
+}
+
+.dev a:hover {
+  text-decoration: none;
+  color: var(--Dark-blue-400);
+}
+
+/* MEDIA QUERIES */
+
+
+/* Tablet */
+
+@media screen and (max-width:1400px) {
+
+  .logo-alura{
+    margin: 20px 0 0 20px;
+  }
+
+  main{
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sections{
+    align-items: center;
+  }
+
+  .section1{
+    margin-left: 0;
+  }
+
+  .section2{
+    margin-right: 0;
+  }
+
+  .rectangle{
+    padding: 32px;
+    width: 60%;
+  }
+
+  .rectangle img{
+    display: none;
+  }
+}
+
+/* Movil */
+
+@media screen and (max-width:720px) {
+
+  .logo-alura{
+    margin: 10px 0 0 10px;
+  }
+
+  main{
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .section1{
+    align-items: center;
+  }
+
+  .texto{
+    width: 328px;
+  }
+
+  .botones{
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}
